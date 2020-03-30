@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>链接类型</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			header,
+			main,
+			footer {
+				padding: 10px 30px;
+			}
+
+			section {
+				border: 2px solid rgba(0, 0, 0, .02);
+				box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .2);
+				margin: 10px 0;
+				padding: 0px 10px 20px 10px;
+			}
+
+			section h2 {
+				color: royalblue;
+			}
+
+			a {
+				margin-right: 30px;
+				font-size: 1.2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>超链接示例</h1>
+			<nav>
+				<ul>
+					<li><a href="#s1">链接到文档</a></li>
+					<li><a href="#s2">链接到资源</a></li>
+					<li><a href="#s3">链接打开方式</a></li>
+					<li><a href="#s4">热区链接</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section id="s1">
+			<h2>链接到文档</h2>
+			<!-- 链接到文档 -->
+			<a href="01.html">超链接基本案例</a>
+
+			<!-- 链接到片段 -->
+			<!-- 用id属性定义片段名称 -->
+			<a href="01.html#p2">链接到片段</a>
+			<a href="#p3">链接到本页片段</a>
+			</section>
+
+			<section id="s2">
+			<h2>链接到资源</h2>
+			<!-- 链接到资源 -->
+			<!-- 如果资源不能在浏览器中打开，将自动转换为下载 -->
+			<a href="source.zip">下载课程资源（zip,2k）</a>
+
+			<!-- 如果资源可以打开，则有两种方式，直接打开，或者下载 -->
+			<a href="logo.png">图片会直接打开</a>
+			<a href="..\05\img\video.mp4">mp4会直接打开</a>
+			<a href="css world.pdf">pdf也可以直接打开</a>
+			<!-- 可以使用download属性，设置下载 -->
+			<a href="css world.pdf" download="CSS世界">CSS世界（pdf,40M）</a>
+			</section>
+
+			<section id="s3">
+			<h2>链接打开方式</h2>
+			<!-- 在本页打开 -->
+			<a href="01.html" target="_self">在本页打开</a>
+			<!-- 在新标签页打开 -->
+			<a href="01.html" target="_blank">新标签页打开</a>
+			<!-- 在指定iframe中打开 -->
+			<a href="//www.baidu.com" target="n">在指定iframe中打开</a>
+			<!-- 在parent、top中打开 -->
+			<iframe id="n" name="n" src="03.html" width="800" height="200"></iframe>
+			</section>
+
+			<section id="s4">
+				<h2>热区链接</h2>
+				<!-- 
+				定义map
+				img上使用usemap
+				-->
+				<img src="fe.png" alt="fe" usemap="#map">
+				<map name="map">
+					<area shape="circle" coords="1054, 404, 106" title="html5" href="//www.baidu.com/s?wd=html5">
+					<area shape="poly" coords="131, 256, 366, 257, 344, 493, 250, 520, 155, 493" title="css3" href="//www.baidu.com/s?wd=css3">
+					<area shape="rect" coords="579, 223, 883, 525" title="javascript" href="//www.baidu.com/s?wd=js">
+				</map>
+			</section>
+
+			<p id="p3" style="margin: 1000px 0;">页面内部链接</p>
+		</main>
+		<footer>
+			前端开发课程组&copy;版权所有。
+		</footer>
+	</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 插入图像 -->
+		<!-- 
+		    src 图片资源地址（必须）
+		    alt 图片文本描述（相当有用），让搜索引擎、无障碍阅读器使用，加载失败是备用提示
+			https://www.baidu.com/img/bd_logo1.png
+		-->
+<!-- 		<img src="img/logo.png" alt="MDN logo">
+		<img src="/02%20PPT/05/img/logo.png"  alt="MDN logo">
+		<img src="//www.baidu.com/img/bd_logo1.png" alt="baidu logo"> -->
+		
+		<!-- 使用图像标题 -->
+<!-- 		<figure>
+			<img src="img/logo.png" alt="MDN logo" >
+			<figcaption>MDN logo</figcaption>
+		</figure> -->
+		
+		<!-- 让浏览器兼容 -->
+<!-- 		<picture>
+			<source type="image/svg+xml" srcset="img/MDN.svg">
+			<source type="image/webp" srcset="img/MDN.webp">
+			<img src="img/MDN.jpg" alt="MDN logo">
+		</picture> -->
+		
+		
+		<!-- 使用响应式图像 -->
+		<picture>
+			<!-- 大于800px的设备上显示宽屏logo -->
+			<source srcset="img/logo-w.png" media="(min-width:800px)">
+			<img src="img/logo.png" alt="mdn logo" >
+		</picture>
+		
+		
+	</body>
+</html>
