@@ -8,7 +8,7 @@
 1. 了解课程
 	1. [极简网页](//zptcsoft.github.io/h/01/index.html)
 2. 初见建筑师HTML
-   1. [全局属性](//zptcsoft.github.io/h/02/global attributes.html)
+	1. [全局属性](//zptcsoft.github.io/h/02/global%20attributes.html)
 3. 搭建极简网页
 4. 处理文本
 5. 嵌入媒体
