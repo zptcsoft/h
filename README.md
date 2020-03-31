@@ -10,6 +10,9 @@
 2. 初见建筑师HTML
 	1. [全局属性](//zptcsoft.github.io/h/02/global%20attributes.html)
 3. 搭建极简网页
+   1. [分节元素](//zptcsoft.github.io/h/03/blog.html)
+   2. [head部分元素](//zptcsoft.github.io/h/03/test.html)
+   3. [meta元素](//zptcsoft.github.io/h/03/meta.html)
 4. 处理文本
 5. 嵌入媒体
 6. 创建超链接
