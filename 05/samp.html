@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 
+		 前端开发特点：
+			1. 技术发展非常快
+			2. html\css技术发展非常快，浏览器发展不均衡
+			3. 兼容性问题
+				浏览器兼容  picture source(type)
+				设备兼容    picture source(media--(min-width))
+		 -->
+		 <!-- 插入音频 -->
+		 <!-- 插件的方式插入音频，现代浏览器（chrome\firefox\safari\opera\edge）自动编译成audio、video -->
+		 <!-- <embed src="img/audio.mp3" type="audio/mp3" autostart="true"> -->
+		 
+		 <!-- audio -->
+		 <!-- <audio src="img/audio.mp3"></audio> -->
+		 <!-- autoplay属性chrome支持不好 -->
+		 <!-- audio和source配合使用，实现浏览器兼容 -->
+<!-- 		 <audio controls="controls" autoplay="autoplay" muted>
+			 <source src="img/audio.ogg" type="audio/ogg">
+			 <source src="img/audio.mp3" type="audio/mp3">
+		 </audio> -->
+		 
+		 <!-- 插入视频 -->
+		 <!-- embed -->
+		 <!-- video -->
+		 <!-- 刚刚忘记了poster属性，设置视频默认界面，设置这个之后就可以字幕啦 -->
+		 <video controls="controls" autoplay="autoplay"  poster="img/logo.png">
+			 <source src="img/video.webm" type="video/webm">
+			 <source src="img/video.mp4" type="video/mp4">
+			 <!-- 可控性比较弱，样式、位置，大部分时候使用开源第三方库，自己实现 -->
+			 <track label="中文字幕" kind="subtitles" srclang="zh" src="img/ci.vtt">
+		 </video>
+	</body>
+</html>
