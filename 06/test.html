@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- source.zip不能在浏览器打开 -->
+		<!-- 链接到的资源，不能直接打开，自动转换为下载。 -->
+		<!-- 项目，协作式的开发 -->
+		<!-- 前端开发、后端开发、游戏开发、全栈开发、数据库开发、软件测试、产品经理 -->
+		<!-- 软件产品的价值，主要体现在哪些方面：
+			功能是不是完善、强大，
+			性能够不够流畅，并发性
+			可用性，界面美观、友好性，非常重要的。
+		 -->
+		 <!-- 
+		  软件开发的流程：
+			1. 界面原型或界面设计
+			2. 前端开发实现界面，html\css\javascript，模拟数据接口
+			3. 数据库设计，数据库（课程网站数据库，很多表），课程资源表（资源类型，资源大小）
+			4. 后端开发（java、java web），课程资源的上传（读取文件的类型和大小，存放到数据库里去），开发一个接口（按照前端模拟数据类做）
+		  -->
+		<a href="source.zip">课程资源（zip,2k）</a>
+		<!-- 资源能够在浏览器打开 -->
+		<!-- 浏览器会默认打开资源 -->
+		<br>
+		<a href="css world.pdf">pdf</a>
+		<a href="logo.svg">svg</a>
+		<br>
+		<!-- 如果需要下载这个资源 -->
+		<a href="css world.pdf" download="css">pdf</a>
+		
+		
+		<br>
+		<!-- 超链接打开方式 -->
+		<!-- target属性指定打开方式，可缺省 -->
+		<!-- target _self 本页面打开 -->
+		<a href="css world.pdf" target="_self">本页面打开</a>
+		<!-- target _blank 新标签页面打开 -->
+		<a href="css world.pdf" target="_blank">新标签页面打开</a>
+		<!-- target _parent 父页面（如果有的话）打开 -->
+		<a href="02.html" target="_parent">在父页面打开</a>
+		<!-- target _top  顶页面（如果有的话）打开 -->
+		<a href="02.html" target="_top">在父页面打开</a>
+		<br>
+		<!-- target 一个固定的地址 -->
+		<a href="01.html" target="qianru">超链接</a>
+		<!-- iframe 嵌入一个网页 -->
+		<iframe name="qianru" id="qianru" src="mobile.html" width="600" height="600"></iframe>
+	</body>
+</html>
