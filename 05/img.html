@@ -1,55 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>插入图像</title>
-    <link
-      rel="shortcut icon"
-      href="https://www.w3school.com.cn/ui2019/logo-96-red.png"
-    />
-    <style>
-      picture,
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>插入图像</title>
+		<link rel="shortcut icon" href="https://www.w3school.com.cn/ui2019/logo-96-red.png" />
+		<style>
+			picture,
       picture img {
         height: 60px;
       }
     </style>
-  </head>
-  <body>
-    <!-- 插入图像 -->
-    <img src="https://www.baidu.com/img/bd_logo1.png" alt="百度logo" />
-    <img src="https://www.baidu.com/img/bd_logo1.png" alt="百度logo" />
-    <!-- 
+	</head>
+	<body>
+		<!-- 插入图像 -->
+		<img src="https://www.baidu.com/img/bd_logo1.png" alt="百度logo" />
+		<img src="https://www.baidu.com/img/bd_logo1.png" alt="百度logo" />
+		<!-- 
         src 图片资源地址（必须）
         alt 图片文本描述（相当有用），让搜索引擎、无障碍阅读器使用，加载失败是备用提示
     -->
-    <!-- 使用图像标题 -->
-    <figure>
-      <img src="img/logo.png" alt="火狐LOGO" />
-      <figcaption>今日LOGO分享</figcaption>
-    </figure>
-    <!-- 使用响应式图像 -->
-    <picture>
-      <!-- 在宽度大于800px的情况下，使用宽logo -->
-      <source srcset="img/logo-w.png" media="(min-width: 800px)" />
-      <!-- 否则，采用默认的窄logo -->
-      <img src="img/logo.png" alt="MDN" />
-    </picture>
-    <!-- 让浏览器兼容 -->
-    <picture>
-      <source type="image/svg+xml" srcset="img/MDN.svg" />
-      <source type="image/webp" srcset="img/MDN.webp" />
-      <img
-        src="img/MDN.jpg"
-        alt="火狐开发者社区LOGO"
-      />
-    </picture>
-    <!-- 在线图片转换工具 -->
-    <div id="toolfk-widget" data-url="convert-svg"></div>
-    <script
-      type="text/javascript"
-      src="//www.toolfk.com/widget.js"
-      async="async"
-    ></script>
-  </body>
+		<!-- 使用图像标题 -->
+		<figure>
+			<img src="img/logo.png" alt="火狐LOGO" />
+			<figcaption>今日LOGO分享</figcaption>
+		</figure>
+		<!-- 使用响应式图像 -->
+		<picture>
+			<!-- 在宽度大于800px的情况下，使用宽logo -->
+			<source srcset="img/logo-w.png" media="(min-width: 800px)" />
+			<!-- 否则，采用默认的窄logo -->
+			<img src="img/logo.png" alt="MDN" />
+		</picture>
+		<!-- 让浏览器兼容 -->
+		<picture>
+			<source type="image/svg+xml" srcset="img/MDN.svg" />
+			<source type="image/webp" srcset="img/MDN.webp" />
+			<img src="img/MDN.jpg" alt="火狐开发者社区LOGO" />
+		</picture>
+		<!-- 在线图片转换工具 -->
+		<div id="toolfk-widget" data-url="convert-svg"></div>
+		<script type="text/javascript" src="//www.toolfk.com/widget.js" async="async"></script>
+	</body>
 </html>
