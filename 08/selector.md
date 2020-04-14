@@ -1,10 +1,10 @@
 [TOC]
 
-# CSS选择器
+# CSS选择器详解
 
 CSS可以选择元素并进行美化，CSS选择器就是实现选择的工具，实际上在CSS和HTML之间构建桥梁，实现两者之间的沟通。
 
-## 1. 基本选择器
+## 1. [基本选择器](http://css.doyoe.com/selectors/element/index.htm)
 
 ### 1.1 通配选择器
 
@@ -116,7 +116,8 @@ nav a{
 	font-weight: 700;
 }
 <div class="a b">给某个div元素定义.a和.b两个类</div>
-
+<div class="a">给某个div元素定义.a和.b两个类</div>
+<div class="b">给某个div元素定义.a和.b两个类</div>
 /*多类选择符使用*/
 .a.b {
 	color: #f00;
@@ -162,11 +163,87 @@ nav a{
 
 | 选择符         | 描述                                                         |
 | :------------- | :----------------------------------------------------------- |
-| E[att\]        | 选择具有att属性的E元素。                                     |
+| E[att]         | 选择具有att属性的E元素。                                     |
 | E[att="val"]   | 选择具有att属性且属性值等于val的E元素。                      |
 | E[att~="val"]  | 选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素。 |
 | E[att^="val"]  | 选择具有att属性且属性值为以val开头的字符串的E元素。          |
 | E[att$="val"]  | 选择具有att属性且属性值为以val结尾的字符串的E元素。          |
 | E[att*="val"]  | 选择具有att属性且属性值为包含val的字符串的E元素。            |
 | E[att\|="val"] | 选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择。 |
+
+```css
+/* 设置链接 */
+a {
+  color: blue;
+}
+
+/* 以 "#" 开头的页面本地链接 */
+a[href^="#"] {
+  background-color: gold;
+}
+
+/* 包含 "example" 的链接 */
+a[href*="example"] {
+  background-color: silver;
+}
+
+/* 包含 "insensitive" 的链接,不区分大小写 */
+a[href*="insensitive" i] {
+  color: cyan;
+}
+
+/* 包含 "cAsE" 的链接，区分大小写 */ 
+a[href*="cAsE" s] { 
+  color: pink; 
+}
+
+/* 以 ".org" 结尾的链接 */
+a[href$=".org"] {
+  color: red;
+}
+
+/* 设置语言 */
+/* 将所有包含 `lang` 属性的 <div> 元素的字重设为 bold */
+div[lang] {
+  font-weight: bold;
+}
+
+/* 将所有语言为美国英语的 <div> 元素的文本颜色设为蓝色 */
+div[lang~="en-us"] {
+  color: blue;
+}
+
+/* 将所有语言为葡萄牙语的 <div> 元素的文本颜色设为绿色 */
+div[lang="pt"] {
+  color: green;
+}
+
+/* 将所有语言为中文的 <div> 元素的文本颜色设为红色
+   无论是简体中文（zh-CN）还是繁体中文（zh-TW） */
+div[lang|="zh"] {
+  color: red;
+}
+
+/* 将所有 `data-lang` 属性的值为 "zh-TW" 的 <div> 元素的文本颜色设为紫色 */
+/* 备注: 和 JS 不同，CSS 可以在不使用双引号的情况下直接使用带连字符的属性名 */ 
+div[data-lang="zh-TW"] {
+  color: purple;
+}
+
+/* 设置列表 */
+ol[type="a"] {
+  list-style-type: lower-alpha;
+  background: red;
+}
+
+ol[type="a" s] {
+  list-style-type: lower-alpha;
+  background: lime;
+}
+
+ol[type="A" s] {
+  list-style-type: upper-alpha;
+  background: lime;
+}
+```
 
