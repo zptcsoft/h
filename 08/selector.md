@@ -161,6 +161,8 @@ nav a{
 
 ## 2. [属性选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors)
 
+### 2.1 属性列表
+
 | 选择符         | 描述                                                         |
 | :------------- | :----------------------------------------------------------- |
 | E[att]         | 选择具有att属性的E元素。                                     |
@@ -171,7 +173,34 @@ nav a{
 | E[att*="val"]  | 选择具有att属性且属性值为包含val的字符串的E元素。            |
 | E[att\|="val"] | 选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择。 |
 
+### 2.2 语法
+
 ```css
+/* 属性选择器 */
+/* 选择具有href属性的超链接a */
+a[href]{}
+/* 选择具有name属性的超链接a */
+a[name]{}
+/* 选择具有name属性的，class等于top的元素 */
+.top[name]{}
+
+/* 比上面的a[name]选择范围更小，优先级更高 */
+/* 选择具有name属性的，且属性值等于top的元素 */
+a[name="top"]{}
+
+/* 选择具有class属性，并且属性值为一个空格隔开的属性列表，bold是其中之一 */
+p[class~="bold"]{}
+/* 选择具有lang属性，并且属性值为zh或者zh-开头的p元素 */
+p[lang|="zh"]{}
+
+/* 选择具备href属性，属性值为#开头的p元素 */
+p[href^="#"]{}
+/* 选择具备href属性，属性值为.pdf结束的class包含a元素 */
+.a[href$=".pdf"]{}
+
+/* 选择具备href属性，属性值包含example的所有元素 */
+[href*="example"]{}
+
 /* 设置链接 */
 a {
   color: blue;
@@ -180,26 +209,6 @@ a {
 /* 以 "#" 开头的页面本地链接 */
 a[href^="#"] {
   background-color: gold;
-}
-
-/* 包含 "example" 的链接 */
-a[href*="example"] {
-  background-color: silver;
-}
-
-/* 包含 "insensitive" 的链接,不区分大小写 */
-a[href*="insensitive" i] {
-  color: cyan;
-}
-
-/* 包含 "cAsE" 的链接，区分大小写 */ 
-a[href*="cAsE" s] { 
-  color: pink; 
-}
-
-/* 以 ".org" 结尾的链接 */
-a[href$=".org"] {
-  color: red;
 }
 
 /* 设置语言 */
@@ -246,4 +255,6 @@ ol[type="A" s] {
   background: lime;
 }
 ```
+
+### 2.3 使用案例
 

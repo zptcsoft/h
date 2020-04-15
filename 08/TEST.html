@@ -3,10 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title>CSS选择器2-属性选择器</title>
+		<!-- 重置先 -->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<style type="text/css">
 			/* 页内CSS的方式 */
 			/* 上课的时候的案例都是小案例, 省劲儿方便 */
+			
+			
 			/* 简单粗暴的重置 */
 			*{
 				padding: 0;
@@ -27,45 +30,27 @@
 				.header a
 				a[href]
 			 */
+			
+			
 			/* 属性选择器 */
 			/* 选择具有href属性的超链接a */
-			a[href]{
-				font-size: 2em;
-			}
-			a[name]{
-				/* 设置文本装饰-删除线 */
-				text-decoration: line-through;
-			}
+			a[href]{}
+			/* 选择具有name属性的超链接a */
+			a[name]{}
 			/* 选择具有name属性的，class等于top的元素 */
-			.top[name]{
-				
-			}
+			.top[name]{}
 			/* 比上面的a[name]选择范围更小，优先级更高 */
-			a[name="top"]{
-				/* 设置文本装饰-删除线 */
-				text-decoration: underline;
-			}
+			a[name="top"]{}
 			/* 选择具有class属性，并且属性值为一个空格隔开的属性列表，bold是其中之一 */
-			p[class~="bold"]{
-				font-weight: bold;
-			}
+			p[class~="bold"]{}
 			/* 选择具有lang属性，并且属性值为zh或者zh-开头的p元素 */
-			p[lang|="zh"]{
-				background-color: red;
-			}
-			
+			p[lang|="zh"]{}
 			/* 选择具备href属性，属性值为#开头的p元素 */
-			p[href^="#"]{
-				
-			}
+			p[href^="#"]{}
 			/* 选择具备href属性，属性值为.pdf结束的class包含a元素 */
-			.a[href$=".pdf"]{
-				
-			}
+			.a[href$=".pdf"]{}
 			/* 选择具备href属性，属性值包含example的所有元素 */
-			[href*="example"]{
-				
-			}
+			[href*="example"]{}
 		</style>
 	</head>
 	<body>
