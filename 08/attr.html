@@ -11,19 +11,22 @@
 			hr {
 				margin: 30px 0;
 			}
-
-			.file a[href] {
-				padding: 2px 20px;
-				background-size: 20px;
-				background-repeat: no-repeat;
+			
+			a{
+				text-decoration: underline;
+				color: #000;
+			}
+			a:hover{
 				text-decoration: none;
-				color: black;
-				transition: all .5s;
+				color: rgba(20, 150, 255, .8);
 			}
 
-			.file a[href]:hover {
-				text-decoration: underline;
-				color: rgba(250, 150, 20, .8);
+			.file a[href] {
+				padding: 0px 20px;
+				background-size: 20px;
+				background-repeat: no-repeat;
+				color: black;
+				transition: all .5s;
 			}
 
 			.file a[href$="doc"] {
@@ -51,11 +54,13 @@
 			/* target属性 */
 			.link a[target] {
 				text-decoration: none;
-				padding: 2px;
+				padding: 5px;
+				border-bottom: 1px solid #000;
 			}
 
 			.link a[target]:hover {
-				text-decoration: underline;
+				padding-bottom: 0px;
+				border-bottom: 6px solid rgba(20, 150, 255, .8);;
 			}
 
 			/* download属性 */
@@ -77,6 +82,7 @@
 			}
 			.button:hover{
 				background-color: #87CEFA;
+				color: #000;
 			}
 
 			.button[count]::after {
@@ -110,14 +116,32 @@
 				font-size: .8em;
 				position: absolute;
 				z-index: 9999;
-				left: 3em;
-				bottom: -1.8em;
+				left: 0;
+				top: 3em;
 				opacity: 0;
-				transition: all .5s; 
+				transition: top .5s,opacity .5s; 
 			}
 			.tip [title]:hover::after {
-				left: 0;
+				top: 1.5em;
 				opacity: 1;
+			}
+			
+			/* 快捷键 */
+			a[accesskey]{
+				color: #000;
+			}
+			a[accesskey]:hover{
+				color: rgba(20, 150, 255, .8);
+			}
+			a[accesskey]::after {
+				content:"[快捷键:Alt+" attr(accesskey) "]";
+			}
+			
+			/* print格式 */
+			@media print {
+				.print a::after{
+					content: "[" attr(href) "]";
+				}
 			}
 		</style>
 	</head>
@@ -142,6 +166,14 @@
 		<hr>
 		<div class="tip">
 			<a href="#" title="主题党日活动">聚焦线上教学质量</a>
+		</div>
+		<hr>
+		<div class="key">
+			<a href="//www.baidu.com/s?wd=html" accesskey="h">HTML</a>
+		</div>
+		<hr>
+		<div class="print">
+			<a href="//www.baidu.com/s?wd=html">HTML</a>
 		</div>
 	</body>
 </html>
