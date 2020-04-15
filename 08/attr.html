@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh">
-
 	<head>
 		<meta charset="UTF-8">
 		<title>Document</title>
@@ -74,6 +73,10 @@
 				border-radius: 4px;
 				text-decoration: none;
 				position: relative;
+				transition: background-color .5s;
+			}
+			.button:hover{
+				background-color: #87CEFA;
 			}
 
 			.button[count]::after {
@@ -99,14 +102,15 @@
 			}
 			.tip [title]::after {
 				content: attr(title);
-				color: hotpink;
-				background-color: slateblue;
+				color: #fff;
+				background-color: #4169E1;
 				display: block;
 				overflow-wrap: normal;
 				padding: .15em .5em;
+				font-size: .8em;
 				position: absolute;
 				right: -50px;
-				bottom: -25px;
+				bottom: -1.8em;
 				opacity: 0;
 				transition: all .5s; 
 			}
@@ -116,7 +120,6 @@
 			}
 		</style>
 	</head>
-
 	<body>
 		<div class="file">
 			<a href="abc.doc">doc文件</a>
@@ -137,9 +140,7 @@
 		</div>
 		<hr>
 		<div class="tip">
-			<a href="#" title="新闻标题">新闻新闻新闻新闻新闻</a>
+			<a href="#" title="主题党日活动">聚焦线上教学质量</a>
 		</div>
-
 	</body>
-
 </html>
