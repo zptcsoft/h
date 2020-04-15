@@ -54,13 +54,13 @@
 			/* target属性 */
 			.link a[target] {
 				text-decoration: none;
-				padding: 5px;
+				padding: 0px;
 				border-bottom: 1px solid #000;
 			}
 
 			.link a[target]:hover {
-				padding-bottom: 0px;
-				border-bottom: 6px solid rgba(20, 150, 255, .8);;
+				padding-bottom: 1px;
+				border-bottom: 5px solid rgba(20, 150, 255, .8);;
 			}
 
 			/* download属性 */
@@ -88,10 +88,11 @@
 			.button[count]::after {
 				content: attr(count);
 				position: absolute;
-				width: 30px;
-				height: 30px;
+				width: 20px;
+				height: 20px;
 				text-align: center;
-				line-height: 30px;
+				line-height: 20px;
+				font-size: .8em;
 				border-radius: 50%;
 				background: red;
 				color: #fff;
