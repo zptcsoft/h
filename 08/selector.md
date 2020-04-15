@@ -258,3 +258,96 @@ ol[type="A" s] {
 
 ### 2.3 使用案例
 
+```css
+/* 文件类型 */
+.file a[href] {
+    padding: 0px 20px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    color: black;
+    transition: all .5s;
+}
+.file a[href$="doc"] {
+    background-image: url(img/word.png);
+}
+.file a[href$="pdf"] {
+    background-image: url(img/pdf.png);
+}
+.file a[href$="ppt"] {
+    background-image: url(img/ppt.png);
+}
+.file a[href$="rar"] {
+    background-image: url(img/rar.png);
+}
+
+/*外链链接*/
+[href^="//"]:not([href*="zptcsoft.github.io"]) {
+    padding-right: 1em;
+    background: url("img/Icon_External_Link.svg") 100%/16px no-repeat;
+}
+
+/* download属性 */
+.link a[download] {
+    padding-right: 1.5em;
+    background: url(img/download.png) right no-repeat;
+}
+
+/* 新消息提示 */
+.button {
+    margin-right: 20px;
+    padding: 10px 30px;
+    background-color: #4169E1;
+    color: #FFFFFF;
+    border-radius: 4px;
+    text-decoration: none;
+    position: relative;
+    transition: background-color .5s;
+}
+.button:hover{
+    background-color: #87CEFA;
+    color: #000;
+}
+
+.button[count]::after {
+    content: attr(count);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: .8em;
+    border-radius: 50%;
+    background: red;
+    color: #fff;
+    right: -10px;
+    top: -10px;
+}
+
+/* tooltip */
+.tip [title]{
+    position: relative;
+}
+.tip [title]:hover{
+    cursor: pointer;
+}
+.tip [title]::after {
+    content: attr(title);
+    color: #fff;
+    background-color: #4169E1;
+    display: block;
+    overflow-wrap: normal;
+    padding: .15em .5em;
+    font-size: .8em;
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    top: 3em;
+    opacity: 0;
+    transition: top .5s,opacity .5s; 
+}
+.tip [title]:hover::after {
+    top: 1.5em;
+    opacity: 1;
+}
+```
+
