@@ -36,4 +36,7 @@
 8. CSS选择的艺术
    1. [基本选择器](//zptcsoft.github.io/h/08/simple.html)
    2. [软文广告](//zptcsoft.github.io/h/08/ad.html)
-   2. [伪元素](//zptcsoft.github.io/h/08/pseudo.html)
+   3. [属性选择器](//zptcsoft.github.io/h/08/attr.html)
+   4. [属性选择器-上课用](//zptcsoft.github.io/h/08/test.html)
+   5. [伪对象选择器](//zptcsoft.github.io/h/08/pseudo_object.html)
+   6. [伪元素绘图-心形](//zptcsoft.github.io/h/08/heart.html)
