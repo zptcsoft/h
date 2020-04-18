@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>伪元素绘图</title>
+		<style type="text/css">
+			.heart{
+				position: relative;
+			}
+			.heart::before,
+			.heart::after{
+				content: "";
+				display: block;
+				left: 0;
+				/* position: absolute; */
+				width: 6em;
+				height: 10em;
+				background-color: lightsalmon;
+				border-radius: 3em 3em 0 0;
+			}
+			.heart::before{
+				transform-origin: center bottom;
+				transform: rotate(-45deg);
+			}
+			.heart::after{
+				transform-origin: center bottom;
+				transform: rotate(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="heart">
+			
+		</div>
+	</body>
+</html>
