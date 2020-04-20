@@ -15,7 +15,8 @@ body{
 }
 
 .demo .shape {
-	padding: 2dm;
+	padding: 2em;
+	overflow: hidden;
 }
 
 .demo h3 {

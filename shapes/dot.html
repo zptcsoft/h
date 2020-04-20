@@ -8,13 +8,14 @@
 			.dot {
 				position: relative;
 			}
-			.dot::after{
+
+			.dot::after {
 				content: "";
 				clear: both;
 				display: block;
 			}
-			
-			.dot>div{
+
+			.dot>div {
 				width: .8em;
 				height: .8em;
 				background-color: currentcolor;
@@ -22,110 +23,162 @@
 				transform-origin: center center;
 				float: left;
 			}
-			
-			.dot>div:nth-child(2){
+
+			.dot>div:nth-child(2) {
 				animation-delay: .3s;
 			}
-			
-			.dot>div:nth-child(3){
+
+			.dot>div:nth-child(3) {
 				animation-delay: .6s;
 			}
+
 			/**
 			 * ==============================================
 			 * Dot Pulse
 			 * ==============================================
 			 */
-			.dot-pulse>div{
+			.dot-pulse>div {
 				animation: dotPulse 1s infinite linear backwards alternate;
 			}
-			
+
 			@keyframes dotPulse {
-			  0% {
-				  transform: scale(0);
-			  }
-			  100% {
-				  transform: scale(1);
-			  }
+				0% {
+					transform: scale(0);
+				}
+
+				100% {
+					transform: scale(1);
+				}
 			}
-			
+
 			/**
 			 * ==============================================
 			 * Dot Flash
 			 * ==============================================
 			 */
-			.dot-flash>div{
-				margin-right:.2em;
+			.dot-flash>div {
+				margin-right: .2em;
 				animation: dotFlash 1s infinite linear backwards alternate;
 			}
-			
+
 			@keyframes dotFlash {
-			  0% {
-				  opacity: 0;
-			  }
-			  100% {
-				  opacity: 1;
-			  }
+				0% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 1;
+				}
 			}
+
 			/**
 			 * ==============================================
 			 * Dot Up
 			 * ==============================================
 			 */
-			.dot-up>div{
-				margin-right:.2em;
+			.dot-up>div {
+				margin-right: .2em;
 				animation: dotUp 1s infinite linear backwards alternate;
 			}
-			
-			.dot-up>div:nth-child(2){
+
+			.dot-up>div:nth-child(2) {
 				animation-delay: 0.2s;
 			}
-			
-			.dot-up>div:nth-child(3){
+
+			.dot-up>div:nth-child(3) {
 				animation-delay: 0.4s;
 			}
-			
+
 			@keyframes dotUp {
-			  0% {
-				  transform: translateY(0);
-			  }
-			  50%{
-				  transform: translateY(1em);
-			  }
-			  100% {
-				  transform: translateY(0);
-			  }
+				0% {
+					transform: translateY(0);
+				}
+
+				50% {
+					transform: translateY(1em);
+				}
+
+				100% {
+					transform: translateY(0);
+				}
 			}
+
 			/**
 			 * ==============================================
 			 * Dot Rotate
 			 * ==============================================
 			 */
-			.dot-rotate{
-				margin-left: 0.8em;
+			.dot-rotate {
+				margin-left: 0.5em;
 				animation: dotRotate 1s infinite linear backwards;
 				transform-origin: 1em 0.8em;
 			}
-			.dot-rotate>div{
+
+			.dot-rotate>div {
 				transform-origin: 1em center;
 				position: absolute;
 				left: 0;
 				top: 0.4em;
 			}
-			
-			.dot-rotate>div:nth-child(2){
+
+			.dot-rotate>div:nth-child(2) {
 				transform: rotate(120deg);
 			}
-			.dot-rotate>div:nth-child(3){
+
+			.dot-rotate>div:nth-child(3) {
 				transform: rotate(240deg);
 			}
-			
+
 			@keyframes dotRotate {
-			  0% {
-				  transform: rotate(0deg);
-			  }
-			  100% {
-				  transform: rotate(359deg);
-			  }
+				0% {
+					transform: rotate(0deg);
+				}
+
+				100% {
+					transform: rotate(359deg);
+				}
+			}
+
+			/**
+			 * ==============================================
+			 * Dot Rect
+			 * ==============================================
+			 */
+			.dot-rect {
+				margin-left: 0.5em;
+				width: .8em;
+				height: .8em;
+				border-radius: 50%;
+				position: relative;
+				left: 1000em;
+				box-shadow: -1000em -1000em 0 0 currentcolor,
+							-999em -1000em 0 0 currentcolor,
+				            -999em -999em 0 0 currentcolor;
+				animation: dotRect 2s infinite linear both;
+			}
+
+			
+			@keyframes dotRect {
+				0%,80%,100%{
+					box-shadow: -1000em 0 0 0 currentcolor,
+								-999em 0 0 0 currentcolor,
+					            -999em 1em 0 0 currentcolor;
+				}
+				5%,25% {
+					box-shadow: -999em 0 0 0 currentcolor,
+								-999em 1em 0 0 currentcolor,
+					            -1000em 1em 0 0 currentcolor;
+				}
+				30%,50% {
+					box-shadow: -999em 1em 0 0 currentcolor,
+								-1000em 1em 0 0 currentcolor,
+					            -1000em 0 0 0 currentcolor;
+				}
+				55%,75%{
+					box-shadow: -1000em 1em 0 0 currentcolor,
+								-1000em 0 0 0 currentcolor,
+					            -999em 0 0 0 currentcolor;
+				}
 			}
 		</style>
 	</head>
@@ -166,6 +219,11 @@
 					<div></div>
 					<div></div>
 				</div>
+			</section>
+			<!-- Dot rect -->
+			<section class="shape">
+				<h3>圆环转动</h3>
+				<div class="dot dot-rect"></div>
 			</section>
 		</article>
 	</body>
