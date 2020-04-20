@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@5"></script><script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.6.0/dist/view.min.js"></script>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script>markmap.markmap('svg#mindmap',{"t":"heading","d":1,"v":"CSS绘图","c":[{"t":"heading","d":2,"v":"相关的属性","c":[{"t":"heading","d":3,"v":"border"},{"t":"heading","d":3,"v":"background"},{"t":"heading","d":3,"v":"box-shadow"},{"t":"heading","d":3,"v":"transform"},{"t":"heading","d":3,"v":"animation"}]},{"t":"heading","d":2,"v":"案例","c":[{"t":"heading","d":3,"v":"<a href=\"circle.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">圆形</a>","c":[{"t":"heading","d":4,"v":"方形变圆形"},{"t":"heading","d":4,"v":"圆形旋转"},{"t":"heading","d":4,"v":"圆形变大"},{"t":"heading","d":4,"v":"圆环变大"},{"t":"heading","d":4,"v":"重叠圆形变大"},{"t":"heading","d":4,"v":"重叠圆环变大"},{"t":"heading","d":4,"v":"点和半环"},{"t":"heading","d":4,"v":"逆向半环"},{"t":"heading","d":4,"v":"圆点移动"}]},{"t":"heading","d":3,"v":"<a href=\"dot.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">点形</a>","c":[{"t":"heading","d":4,"v":"脉冲"},{"t":"heading","d":4,"v":"闪亮"},{"t":"heading","d":4,"v":"上移"},{"t":"heading","d":4,"v":"转动"}]},{"t":"heading","d":3,"v":"<a href=\"square.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">矩形</a>"}]}]}).fit()</script>
+</body>
+</html>
