@@ -180,6 +180,58 @@
 					            -999em 0 0 0 currentcolor;
 				}
 			}
+			
+			/**
+			 * ==============================================
+			 * Dot Pin
+			 * ==============================================
+			 */
+			.dot-pin {}
+			
+			.dot-pin>div {
+				transform-origin: 1.5em center;
+				position: absolute;
+				left: 0;
+				top: 0;
+				animation: dotRotate2 1.8s infinite linear backwards;
+			}
+			
+			.dot-pin>div:nth-child(2) {
+				animation-delay: 0.3s;
+			}
+			
+			.dot-pin>div:nth-child(3) {
+				animation-delay: 0.6s;
+			}
+			
+			.dot-pin>div:nth-child(4) {
+				animation-delay: 0.9s;
+			}
+			
+			.dot-pin>div:nth-child(5) {
+				animation-delay: 1.2s;
+			}
+			
+			.dot-pin>div:nth-child(6) {
+				animation-delay: 1.5s;
+			}
+			
+			@keyframes dotRotate2 {
+				0% {
+					transform: rotate(0deg) scale(.5);
+					opacity: 0;
+				}
+			
+				50% {
+					transform: rotate(180deg) scale(1);
+					opacity: 1;
+				}
+				
+				100% {
+					transform: rotate(359deg) scale(.5);
+					opacity: 0;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -222,8 +274,21 @@
 			</section>
 			<!-- Dot rect -->
 			<section class="shape">
-				<h3>圆环转动</h3>
+				<h3>环动</h3>
 				<div class="dot dot-rect"></div>
+			</section>
+			<!-- Dot pin -->
+			<section class="shape">
+				<h3>环转</h3>
+				<div class="dot dot-pin">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 			</section>
 		</article>
 	</body>

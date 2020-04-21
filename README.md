@@ -163,7 +163,6 @@
     - https://www.xunlei.com/
     - 至少实现3-5个页面
 ## 练习目录
-
 1. 了解课程
 	1. [极简网页](//zptcsoft.github.io/h/01/index.html)
 2. 初见建筑师HTML
