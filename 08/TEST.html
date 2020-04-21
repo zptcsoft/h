@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS选择器2-属性选择器</title>
+		<!-- 重置先 -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<style type="text/css">
+			/* 页内CSS的方式 */
+			/* 上课的时候的案例都是小案例, 省劲儿方便 */
+			
+			
+			/* 简单粗暴的重置 */
+			*{
+				padding: 0;
+				margin: 0;
+				/* 设置盒模型的模式 */
+				box-sizing: border-box;
+			}
+			
+			/* 选择所有的a元素 */
+			/* 谨慎使用，一般只用在全局设置上 */
+			/* 后面的会覆盖前面的 */
+			a{
+				
+			}
+			/* 
+				在具体使用的时候，会做具体的限制
+				a.red
+				.header a
+				a[href]
+			 */
+			
+			
+			/* 属性选择器 */
+			/* 选择具有href属性的超链接a */
+			a[href]{}
+			/* 选择具有name属性的超链接a */
+			a[name]{}
+			/* 选择具有name属性的，class等于top的元素 */
+			.top[name]{}
+			/* 比上面的a[name]选择范围更小，优先级更高 */
+			a[name="top"]{}
+			/* 选择具有class属性，并且属性值为一个空格隔开的属性列表，bold是其中之一 */
+			p[class~="bold"]{}
+			/* 选择具有lang属性，并且属性值为zh或者zh-开头的p元素 */
+			p[lang|="zh"]{}
+			/* 选择具备href属性，属性值为#开头的p元素 */
+			p[href^="#"]{}
+			/* 选择具备href属性，属性值为.pdf结束的class包含a元素 */
+			.a[href$=".pdf"]{}
+			/* 选择具备href属性，属性值包含example的所有元素 */
+			[href*="example"]{}
+		</style>
+	</head>
+	<body>
+		<!-- 
+			CSS选择器，选择符
+			selector, CSS和HTML之间搭建一个桥梁
+				可以利用选择器，高效的选中的HTML元素，设置样式！
+				
+			基本选择器
+				通配选择器 *
+				
+				
+			属性选择器
+				E[attr] 选择具有attr属性的元素
+		 -->
+		 <p lang="zh">1sadfasdfasdf</p>
+		 <p lang="zh-cn">2sadfasdfasdf</p>
+		 <p lang="zh-tw">3sadfasdfasdf</p>
+		 <p lang="en">4sadfasdfasdf</p>
+		 
+		 <p class="red bold">啊啊撒旦法师打发斯蒂芬撒旦法撒旦法师打发斯蒂芬奥数</p>
+		 <p class="green bold tac">啊啊撒旦法师打发斯蒂芬撒旦法撒旦法师打发斯蒂芬奥数</p>
+		 
+		 <a href="//www.baidu.com">baidu</a>
+		 <a id="top" name="top">定义锚记</a>
+		 <p style="height: 10000px;"></p>
+		 <a href="#top">回顶部</a>
+		 <a id="bottom" name="bottom">定义锚记2</a>
+	</body>
+</html>

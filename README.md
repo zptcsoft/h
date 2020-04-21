@@ -1,10 +1,168 @@
 # 练习集中地
-前端开发课程授课所用课堂练习源码，供大家使用。
+## 课程说明
+ ### 前端开发课程授课所用课堂练习源码，供大家使用。
+ ### 所有大神都是练出来！
 
-> 所有大神都是练出来！
-
+## 内容体系
+- 了解课程
+  - 前端开发简介
+    - 行业发展
+      - 职位描述
+      - 任职要求
+      - 学习路径
+  - 课程概述
+    - 课程定位
+      - 前端开发系列课程
+        - 界面设计
+        - 前端开发
+        - 交互开发
+        - 混合式APP开发
+        - 微信开发
+      - 前端开发学习路径
+        - 网页布局
+        - 动态交互
+        - 组件化思想、重构
+        - 移动web APP开发
+        - 小程序应用
+        - 主流框架构建应用
+        - 综合实践
+    - 课程内容
+    - 课程资源
+    - 学习方法
+  - 牛刀小试
+    - 开发环境部署
+      - Hbuilder
+      - Chrome
+    - Hello World
+- 初识HTML
+  - 初见建筑师HTML
+    - HTML概念
+    - HTML基本语法
+    - HTML标签与属性
+    - 识别HTML
+      - 过时的标签
+      - 错误的写法
+  - 搭建极简网页
+    - 文档类型定义 doctype
+    - html\head\body
+    - style\script
+    - 节点元素
+      - header\footer\main\nava\aside\section\article
+  - 处理文本
+    - 标题
+      - h1\h2\h3\h4\h5\h6
+      - hgroup
+    - p
+    - div\span
+    - 强调、引用
+      - em\strong
+      - q\cite\mark\blockquote
+    - 格式化本文
+      - i\u\b\s
+      - sup\sub\big\small\var\code
+    - 编辑
+      - ins\del
+  - 嵌入媒体
+    - 媒体嵌入与资源地址
+    - 图像相关
+      - img
+      - figure\figcaption
+    - 音视频相关
+      - audio
+      - video
+      - svg\canvas
+  - 创建超链接
+    - a
+    - 普通链接
+    - 页内链接
+    - 热区链接
+      - map\area
+- 上手CSS
+  - 邂逅化妆师CSS
+    - CSS概念
+    - CSS语法
+    - CSS使用方式
+    - 牛刀小试
+  - CSS选择的艺术
+    - 基础选择器
+    - 高级选择器
+  - 颜色与背景
+    - 颜色与单位
+    - 背景相关属性
+    - CSS Sprite
+    - CSS渐变（可选）
+  - 边框圆角阴影
+    - 边框
+    - 圆角
+    - CSS绘图与按钮
+      - https://codepen.io/ricardozea/pen/feiLs
+      - https://littlesnippets.net/snip1505
+  - CSS文本样式
+    - 字体
+    - 文本
+    - 文本装饰
+    - 书写模式
+  - 列表
+    - 构建列表
+      - ol\ul\li\dl\dt\dd
+      - 语义化使用
+    - 美化列表
+  - 表格
+    - 构建表格
+      - table\caption\tr\th\td
+      - \thead\tbody\tfoot
+      - col\colgroup
+    - 美化表格
+      - 细线表格
+      - 斑马纹表格
+- 玩转布局
+  - 盒模型
+  - 浮动
+  - 定位
+  - 布局案例
+  - 弹性盒模型（可选）
+- 深入CSS
+  - 浏览器兼容
+    - can i use
+    - 浏览器前缀
+    - Autoprefixer(可选)
+  - 过渡
+  - 动画
+  - 转换
+  - 响应式布局（可选）
+    - 媒体查询
+    - 响应式布局案例
+  - 常见UI库（可选）
+    - bootstrap
+    - mazeui
+  - 命名规范与机制
+    - 命名规则
+- 构建组件
+  - 新闻列表
+  - 导航菜单
+    - 单列菜单
+    - 下拉菜单
+    - 手风琴菜单
+  - 卡片
+    - 新闻卡片
+      - https://littlesnippets.net/snip1237
+    - 图片卡片
+      - https://littlesnippets.net/snip1237
+  - 注册表单
+    - 构建表单
+      - form
+      - fieldset\legend
+      - input\label\select\textarea\button
+      - output\keygen\progress\meter\datalist\
+    - 表单布局
+- 实现案例
+  - 仿腾讯会议
+    - https://meeting.qq.com/index.html
+    - 至少实现2-3个页面
+  - 仿迅雷
+    - https://www.xunlei.com/
+    - 至少实现3-5个页面
 ## 练习目录
-
 1. 了解课程
 	1. [极简网页](//zptcsoft.github.io/h/01/index.html)
 2. 初见建筑师HTML
@@ -36,4 +194,7 @@
 8. CSS选择的艺术
    1. [基本选择器](//zptcsoft.github.io/h/08/simple.html)
    2. [软文广告](//zptcsoft.github.io/h/08/ad.html)
-   2. [伪元素](//zptcsoft.github.io/h/08/pseudo.html)
+   3. [属性选择器](//zptcsoft.github.io/h/08/attr.html)
+   4. [属性选择器-上课用](//zptcsoft.github.io/h/08/test.html)
+   5. [伪对象选择器](//zptcsoft.github.io/h/08/pseudo_object.html)
+   6. [伪元素绘图-心形](//zptcsoft.github.io/h/08/heart.html)

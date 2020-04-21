@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关系选择器</title>
+		<style type="text/css">
+			/* 
+			 E F，包含选择器
+			 E>F，子代选择器
+			 E+F，相邻选择符
+			 E~F，兄弟选择符
+			 利用组合选择器实现精准选择、元素限制
+			 */
+			/* nav下面的a */
+			nav a {}
+
+			/* 区分子代和后代 */
+			
+			/* 后代 */
+			.menu li {
+				
+			}
+			/* 子代 */
+			.menu>li {
+				
+			}
+
+			/* 与h2近邻的p */
+			h2+p {}
+
+			/* 后面所有的兄弟 */
+			h2~p {}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href="#">首页</a>
+			<a href="#">新闻</a>
+		</nav>
+		<ul class="menu">
+			<li> <a href="index.htm" target="_blank" title="网站首页">网站首页 </a>
+			</li>
+			<li> <a href="xygk/xyjj.htm" target="_blank" title="学院概况">学院概况 </a>
+				<ul>
+					<li> <a href="xygk/xyjj.htm" target="_black" title="学院简介">学院简介 </a> </li>
+					<li> <a href="xygk/xyld.htm" target="_black" title="学院领导">学院领导 </a> </li>
+					<li> <a href="xygk/zzjg.htm" target="_black" title="组织机构">组织机构 </a> </li>
+					<li> <a href="xygk/lsyg.htm" target="_black" title="历史沿革">历史沿革 </a> </li>
+					<li> <a href="xygk/xyfg.htm" target="_black" title="学院风光">学院风光 </a> </li>
+					<li> <a href="xygk/xyxx.htm" target="_black" title="学院校训">学院校训 </a> </li>
+					<li> <a href="xygk/xxxt.htm" target="_black" title="形象系统">形象系统 </a> </li>
+					<li> <a href="xygk/xyyg.htm" target="_black" title="学院院歌">学院院歌 </a> </li>
+					<li> <a href="xygk/ldlf.htm" target="_black" title="领导来访">领导来访 </a> </li>
+					<li> <a href="xygk/ywgk.htm" target="_black" title="院务公开">院务公开 </a> </li>
+				</ul>
+			</li>
+			<li> <a href="xwzx/gggs.htm" target="_blank" title="新闻中心">新闻中心 </a>
+				<ul>
+					<li> <a href="xwzx/gggs.htm" target="_black" title="公告公示">公告公示 </a> </li>
+					<li> <a href="xwzx/jysx.htm" target="_black" title="教育时讯">教育时讯 </a> </li>
+					<li> <a href="xwzx/pxdt.htm" target="_black" title="培训动态">培训动态 </a> </li>
+					<li> <a href="xwzx/yyxx.htm" target="_black" title="邮院信息">邮院信息 </a> </li>
+					<li> <a href="xwzx/rydt.htm" target="_black" title="荣誉殿堂">荣誉殿堂 </a> </li>
+				</ul>
+			</li>
+			<li> <a href="#" target="_blank" title="人才培养">人才培养 </a>
+				<ul>
+					<li> <a href="http://jwc.zptc.edu.cn/" target="_black" title="教务处">教务处 </a> </li>
+					<li> <a href="http://xsc.zptc.edu.cn/" target="_black" title="学生处">学生处 </a> </li>
+					<li> <a href="http://zptc.fanya.chaoxing.com/" target="_black" title="网络教学平台">网络教学平台 </a> </li>
+					<li> <a href="http://jpkc.zptc.edu.cn/" target="_black" title="精品课程">精品课程 </a> </li>
+				</ul>
+			</li>
+			<li> <a href="#" target="_blank" title="科学研究">科学研究 </a>
+				<ul>
+					<li> <a href="http://kyc.zptc.edu.cn/" target="_black" title="科研处">科研处 </a> </li>
+				</ul>
+			</li>
+			<li> <a href="#" target="_blank" title="招生就业">招生就业 </a>
+				<ul>
+					<li> <a href="http://zs.zptc.edu.cn/" target="_black" title="招生在线">招生在线 </a> </li>
+					<li> <a href="http://jy.zptc.edu.cn/" target="_black" title="就业创业网">就业创业网 </a> </li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>

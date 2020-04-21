@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>课程练习集中地</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			#mindmap {
+				display: block;
+				width: 100vw;
+				height: 100vh;
+			}
+		</style>
+		<script src="https://cdn.jsdelivr.net/npm/d3@5"></script>
+		<script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.6.0/dist/view.min.js"></script>
+	</head>
+	<body>
+		<svg id="mindmap"></svg>
+		<script>
+			markmap.markmap('svg#mindmap', {
+				"t": "heading",
+				"d": 1,
+				"v": "练习集中地",
+				"c": [{
+					"t": "heading",
+					"d": 2,
+					"v": "课程说明",
+					"c": [{
+						"t": "heading",
+						"d": 3,
+						"v": "前端开发课程授课所用课堂练习源码，供大家使用。"
+					}, {
+						"t": "heading",
+						"d": 3,
+						"v": "所有大神都是练出来！"
+					}]
+				}, {
+					"t": "heading",
+					"d": 2,
+					"v": "内容体系",
+					"c": [{
+						"t": "list_item",
+						"d": 3,
+						"v": "了解课程",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "前端开发简介",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "行业发展",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "职位描述"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "任职要求"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "学习路径"
+								}]
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "课程概述",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "课程定位",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "前端开发系列课程",
+									"c": [{
+										"t": "list_item",
+										"d": 7,
+										"v": "界面设计"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "前端开发"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "交互开发"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "混合式APP开发"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "微信开发"
+									}]
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "前端开发学习路径",
+									"c": [{
+										"t": "list_item",
+										"d": 7,
+										"v": "网页布局"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "动态交互"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "组件化思想、重构"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "移动web APP开发"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "小程序应用"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "主流框架构建应用"
+									}, {
+										"t": "list_item",
+										"d": 7,
+										"v": "综合实践"
+									}]
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "课程内容"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "课程资源"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "学习方法"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "牛刀小试",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "开发环境部署",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "Hbuilder"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "Chrome"
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "Hello World"
+							}]
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "初识HTML",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "初见建筑师HTML",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "HTML概念"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "HTML基本语法"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "HTML标签与属性"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "识别HTML",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "过时的标签"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "错误的写法"
+								}]
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "搭建极简网页",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "文档类型定义 doctype"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "html\\head\\body"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "style\\script"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "节点元素",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "header\\footer\\main\\nava\\aside\\section\\article"
+								}]
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "处理文本",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "标题",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "h1\\h2\\h3\\h4\\h5\\h6"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "hgroup"
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "p"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "div\\span"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "强调、引用",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "em\\strong"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "q\\cite\\mark\\blockquote"
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "格式化本文",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "i\\u\\b\\s"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "sup\\sub\\big\\small\\var\\code"
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "编辑",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "ins\\del"
+								}]
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "嵌入媒体",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "媒体嵌入与资源地址"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "图像相关",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "img"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "figure\\figcaption"
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "音视频相关",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "audio"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "video"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "svg\\canvas"
+								}]
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "创建超链接",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "a"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "普通链接"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "页内链接"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "热区链接",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "map\\area"
+								}]
+							}]
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "上手CSS",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "邂逅化妆师CSS",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "CSS概念"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "CSS语法"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "CSS使用方式"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "牛刀小试"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "CSS选择的艺术",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "基础选择器"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "高级选择器"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "颜色与背景",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "颜色与单位"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "背景相关属性"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "CSS Sprite"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "CSS渐变（可选）"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "边框圆角阴影",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "边框"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "圆角"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "CSS绘图与按钮",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "https://codepen.io/ricardozea/pen/feiLs"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "https://littlesnippets.net/snip1505"
+								}]
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "CSS文本样式",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "字体"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "文本"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "文本装饰"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "书写模式"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "列表",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "构建列表",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "ol\\ul\\li\\dl\\dt\\dd"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "语义化使用"
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "美化列表"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "表格",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "构建表格",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "table\\caption\\tr\\th\\td"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "\\thead\\tbody\\tfoot"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "col\\colgroup"
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "美化表格",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "细线表格"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "斑马纹表格"
+								}]
+							}]
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "玩转布局",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "盒模型"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "浮动"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "定位"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "布局案例"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "弹性盒模型（可选）"
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "深入CSS",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "浏览器兼容",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "can i use"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "浏览器前缀"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "Autoprefixer(可选)"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "过渡"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "动画"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "转换"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "响应式布局（可选）",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "媒体查询"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "响应式布局案例"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "常见UI库（可选）",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "bootstrap"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "mazeui"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "命名规范与机制",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "命名规则"
+							}]
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "构建组件",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "新闻列表"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "导航菜单",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "单列菜单"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "下拉菜单"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "手风琴菜单"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "卡片",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "新闻卡片",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "https://littlesnippets.net/snip1237"
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "图片卡片",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "https://littlesnippets.net/snip1237"
+								}]
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "注册表单",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "构建表单",
+								"c": [{
+									"t": "list_item",
+									"d": 6,
+									"v": "form"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "fieldset\\legend"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "input\\label\\select\\textarea\\button"
+								}, {
+									"t": "list_item",
+									"d": 6,
+									"v": "output\\keygen\\progress\\meter\\datalist\\"
+								}]
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "表单布局"
+							}]
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "实现案例",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "仿腾讯会议",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "https://meeting.qq.com/index.html"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "至少实现2-3个页面"
+							}]
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "仿迅雷",
+							"c": [{
+								"t": "list_item",
+								"d": 5,
+								"v": "https://www.xunlei.com/"
+							}, {
+								"t": "list_item",
+								"d": 5,
+								"v": "至少实现3-5个页面"
+							}]
+						}]
+					}]
+				}, {
+					"t": "heading",
+					"d": 2,
+					"v": "练习目录",
+					"c": [{
+						"t": "list_item",
+						"d": 3,
+						"v": "了解课程",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/01/index.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">极简网页</a>"
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "初见建筑师HTML",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/02/global%20attributes.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">全局属性</a>"
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "搭建极简网页",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/03/blog.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">分节元素</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/03/test.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">head部分元素</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/03/meta.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">meta元素</a>"
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "处理文本",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/04/test.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">综合示例</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/04/format.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">格式化</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/04/em.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">强调</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/04/cite.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">引用</a>"
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "嵌入媒体",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/05/img.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">插入图像</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/05/audio.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">使用音频</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/05/audio2.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">音乐播放器</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/05/samp.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">使用音视频</a>"
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "创建超链接",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/06/01.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">超链接示例</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/06/02.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">使用超链接</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/06/mobile.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">链接到协议</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/06/person.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">个人简历</a>"
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "邂逅化妆师CSS",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/07/rule.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">CSS基本规则</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/07/samp.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">基本语法</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/07/use.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">使用CSS</a>"
+						}]
+					}, {
+						"t": "list_item",
+						"d": 3,
+						"v": "CSS选择的艺术",
+						"c": [{
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/08/simple.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">基本选择器</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/08/ad.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">软文广告</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/08/attr.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">属性选择器</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/08/test.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">属性选择器-上课用</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/08/pseudo_object.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">伪对象选择器</a>"
+						}, {
+							"t": "list_item",
+							"d": 4,
+							"v": "<a href=\"//zptcsoft.github.io/h/08/heart.html\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">伪元素绘图-心形</a>"
+						}]
+					}]
+				}]
+			}).fit()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+body{
+	background: #ed5565;
+	color: #fff;
+}
+.demo {
+	margin: 0 100px;
+	font-size: 20px;
+	/* 变量 */
+	--bdw:3px;
+}
+
+.demo .shape {
+	padding: 2em 2em 3em;
+	/* overflow: hidden; */
+}
+
+.demo h3 {
+	font-size: 1.5em;
+}
+.demo section{
+	display: inline-block;
+	margin: 2em;
+}

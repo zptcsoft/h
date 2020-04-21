@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>圆形</title>
+		<link rel="stylesheet" type="text/css" href="css.css" />
+		<style type="text/css">
+			.circle {
+				width: 3em;
+				height: 3em;
+				border: var(--bdw) solid currentcolor;
+				border-radius: 50%;
+				transform-origin: center center;
+				transition: border-radius .5s;
+				animation: run 1s linear infinite both;
+			}
+			/* 方形变圆形 */
+			.circle1 {
+				border-radius: .5em;
+				animation-duration: .2s;
+			}
+
+			.circle1:hover {
+				border-radius: 50%;
+			}
+
+			.circle2 {
+				border-bottom-color: transparent;
+			}
+			
+			.circle3,
+			.circle5,
+			.circle6{
+				border: none;
+				position: relative;
+				animation-name: none;
+				background: none;
+			}
+			
+			.circle3{
+				background-color: currentcolor;
+				animation-name: chgsize;
+			}
+			
+			.circle4{
+				animation-name: chgsize;
+			}
+			
+			.circle5>div,
+			.circle6>div{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: currentcolor;
+				border-radius: 50%;
+				animation: chgsize 1s linear infinite both;
+			}
+			.circle6>div{
+				background: none;
+				border: var(--bdw) solid currentcolor;
+			}
+			.circle5>div:nth-child(1),
+			.circle6>div:nth-child(1){
+				animation-delay: .3s;
+			}
+			.circle5>div:nth-child(2),
+			.circle6>div:nth-child(2){
+				animation-delay: .6s;
+			}
+			.circle5>div:nth-child(3),
+			.circle6>div:nth-child(3){
+				animation-delay: .9s;
+			}
+			
+			.circle7,
+			.circle8{
+				width: 3em;
+				height: 3em;
+				border: var(--bdw) solid currentcolor;
+				border-radius: 50%;
+				border-color: currentcolor transparent; 
+				animation: run 1s linear infinite both;
+				position: relative;
+			}
+			.circle7::after{
+				content: "";
+				width: 2em;
+				height: 2em;
+				border-radius: 50%;
+				background: currentcolor;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -1em 0 0 -1em;
+				animation: chgsize2 1s linear infinite both;
+			}
+			
+			.circle8::after{
+				content: "";
+				width: 50%;
+				height: 50%;
+				border-radius: 50%;
+				border: var(--bdw) solid currentcolor;
+				border-color: transparent currentcolor; 
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -0.75em 0 0 -0.75em;
+				animation: run2 1s linear infinite both;
+			}
+			
+			.circle9{
+				width: 3em;
+				height: 3em;
+				border: var(--bdw) solid currentcolor;
+				border-radius: 50%;
+				position: relative;
+			}
+			.circle9::after{
+				content: "";
+				width: 20px;
+				height: 20px;
+				background-color: currentcolor;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: calc(50% - 10px);
+				transform-origin: calc((3em - 2 * var(--bdw)) / 2) center;
+				animation: run2 3s linear infinite both;
+			}
+			@keyframes run {
+				0% {
+					transform: scale(1) rotate(0deg);
+				}
+
+				50% {
+					transform: scale(1.2) rotate(180deg);
+				}
+
+				100% {
+					transform: scale(1) rotate(360deg);
+				}
+			}
+			@keyframes chgsize{
+				0% {
+					transform: scale(0);
+					opacity: 1;
+				}
+				
+				100% {
+					transform: scale(1);
+					opacity: 0;
+				}
+			}
+			@keyframes chgsize2{
+				0% {
+					opacity: .2;
+					transform: scale(.2);
+				}
+				
+				50% {
+					opacity: 1;
+					transform: scale(.6);
+				}
+				
+				100% {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+			@keyframes run2 {
+				0% {
+					transform: rotate(720deg);
+				}
+				
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<article class="demo">
+			<section class="shape">
+				<h3>方形变圆形</h3>
+				<div class="circle circle1"></div>
+			</section>
+			<section class="shape">
+				<h3>圆形旋转</h3>
+				<div class="circle circle2"></div>
+			</section>
+			<section class="shape">
+				<h3>圆形变大</h3>
+				<div class="circle circle3"></div>
+			</section>
+			<section class="shape">
+				<h3>圆环变大</h3>
+				<div class="circle circle4"></div>
+			</section>
+			<section class="shape">
+				<h3>重叠圆形变大</h3>
+				<div class="circle circle5">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</section>
+			<section class="shape">
+				<h3>重叠圆环变大</h3>
+				<div class="circle circle6">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</section>
+			<section class="shape">
+				<h3>点和半环</h3>
+				<div class="circle7"></div>
+			</section>
+			<section class="shape">
+				<h3>逆向半环</h3>
+				<div class="circle8"></div>
+			</section>
+			<section class="shape">
+				<h3>圆点移动</h3>
+				<div class="circle9"></div>
+			</section>
+		</article>
+	</body>
+</html>

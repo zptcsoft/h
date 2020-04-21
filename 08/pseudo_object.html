@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>伪对象选择器</title>
+		<style type="text/css">
+			/* 
+			 伪类选择器  主要针对元素的某种状态
+				:hover
+				:link
+				:focus
+			 伪对象选择器  主要针对元素的某个部分
+				::before
+				::first-letter
+			 */
+			/* 全局样式 */
+			.news {}
+
+			.news p {
+				font-size: 1.2em;
+				font-weight: 100;
+			}
+
+			.news header p {
+				font-size: 1em;
+				display: inline-block;
+				margin-right: 20px;
+			}
+
+			/* ::first-letter */
+			/* 选中第一个字 */
+			.news section p:first-child::first-letter {
+				color: #0000FF;
+				font-size: 1.8em;
+				float: left;
+				padding: 0px 10px;
+			}
+			
+			.news section p:not(:first-child){
+				text-indent: 2em;
+			}
+			/* ::first-line */
+			/* 选中第一行,只能应用在块容器中 */
+			/* 只有很小的一部分css属性能被使用 */
+			.news section p:not(:first-child)::first-line {
+				font-weight: 400;
+			}
+
+			/* ::before */
+			.external {
+				color: darkgreen;
+				text-decoration: none;
+			}
+			.external:hover{
+				color: black;
+			}
+
+			.external::before {
+				display: inline-block;
+				content: "";
+				width: 6px;
+				height: 6px;
+				padding: 2px;
+				border: 1px solid darkgreen;
+				border-radius: 50%;
+				margin-left: .2em;
+				margin-right: .1em;
+				background-clip: content-box;
+				transition: background-color .5s;
+			}
+
+			.external:hover::before,
+			.external:active::before,
+			.external:visited::before {
+				background-color: black;
+			}
+
+			/* ::after */
+			.news p[data-tag]::after {
+				content: attr(data-tag);
+				position: absolute;
+				font-size: 0.4em;
+				width: 14px;
+				height: 14px;
+				text-align: center;
+				line-height: 14px;
+				color: #fff;
+				background-color: #4169E1;
+				border-radius: 50%;
+			}
+
+			/* print格式 */
+			@media print {
+				.news a{
+					font-weight: bold;
+				}
+				.news a[href^='http']::after {
+					content: "[" attr(href) "]";
+					font-style: italic;
+				} 
+ 				.news a[href^='//']:not([href^='http'])::after {
+					content: "[https:" attr(href) "]";
+					font-style: italic;
+				}
+				.news .external::before{
+					display: none;
+				}
+			}
+
+			/* ::selection */
+			/* 设置文字选择样式 */
+			.news section p::selection {
+				color: #fff;
+				background-color: crimson;
+			}
+
+			/* ::placeholder */
+			.news input {
+				padding: 6px;
+			}
+
+			.news ::placeholder {
+				color: #008000;
+			}
+		</style>
+	</head>
+	<body>
+		<article class="news">
+			<header>
+				<h1>Java继续霸榜程序语言</h1>
+				<p data-tag="牛">作者：whqet</p>
+				<p>时间：20200416</p>
+			</header>
+			<section>
+				<p>我们都爱Java，Java语言继续霸榜<a class="external" href="//www.tiobe.com/tiobe-index/">编程语言排行榜</a>，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言</p>
+				<p>我们都爱Java，Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言Java语言继续霸榜编程语言JavaJava语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言</p>
+				<p>我们都爱Java，Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言</p>
+				<p>我们都爱Java，Java语言继续霸Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。Java语言继续霸榜编程语言，真是太好了。榜编程语言，真是太好了。Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言Java语言继续霸榜编程语言</p>
+			</section>
+			<section>
+				<input type="text" placeholder="请输入姓名">
+				<a href="//www.baidu.com/s?wd=html">HTML</a>
+			</section>
+		</article>
+	</body>
+</html>
