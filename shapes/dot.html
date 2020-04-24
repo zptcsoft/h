@@ -109,7 +109,7 @@
 			 * ==============================================
 			 */
 			.dot-rotate {
-				margin-left: 0.5em;
+				margin-left: -2em;
 				animation: dotRotate 1s infinite linear backwards;
 				transform-origin: 1em 0.8em;
 			}
@@ -145,7 +145,7 @@
 			 * ==============================================
 			 */
 			.dot-rect {
-				margin-left: 0.5em;
+				margin-left: -1.5em;
 				width: .8em;
 				height: .8em;
 				border-radius: 50%;
@@ -186,7 +186,9 @@
 			 * Dot Pin
 			 * ==============================================
 			 */
-			.dot-pin {}
+			.dot-pin {
+				margin-left: -3.5em;
+			}
 			
 			.dot-pin>div {
 				transform-origin: 1.5em center;
@@ -196,24 +198,28 @@
 				animation: dotRotate2 1.8s infinite linear backwards;
 			}
 			
+			.dot-pin>div:nth-child(1) {
+				animation-delay: -0s;
+			}
+			
 			.dot-pin>div:nth-child(2) {
-				animation-delay: 0.3s;
+				animation-delay: -0.3s;
 			}
 			
 			.dot-pin>div:nth-child(3) {
-				animation-delay: 0.6s;
+				animation-delay: -0.6s;
 			}
 			
 			.dot-pin>div:nth-child(4) {
-				animation-delay: 0.9s;
+				animation-delay: -0.9s;
 			}
 			
 			.dot-pin>div:nth-child(5) {
-				animation-delay: 1.2s;
+				animation-delay: -1.2s;
 			}
 			
 			.dot-pin>div:nth-child(6) {
-				animation-delay: 1.5s;
+				animation-delay: -1.5s;
 			}
 			
 			@keyframes dotRotate2 {
@@ -232,10 +238,68 @@
 					opacity: 0;
 				}
 			}
+			
+			/**
+			 * ==============================================
+			 * Dot Bounce
+			 * ==============================================
+			 */
+			.dot-bounce {
+				margin-left: -6em;
+			}
+			
+			.dot-bounce>div {
+				transform-origin: center center;
+				position: absolute;
+				left: 0;
+				top: 0;
+				animation: dotBounce 0.8s infinite linear backwards;
+			}
+			
+			.dot-bounce>div:nth-child(1) {
+				margin-left: 0em;
+				animation-delay: -1s;
+			}
+			
+			.dot-bounce>div:nth-child(2) {
+				margin-left: 1.5em;
+				animation-delay: -2s;
+			}
+			
+			.dot-bounce>div:nth-child(3) {
+				margin-left: 3em;
+				animation-delay: -3s;
+			}
+			
+			.dot-bounce>div:nth-child(4) {
+				margin-left: 4.5em;
+				animation-delay: -4s;
+			}
+			.dot-bounce>div:nth-child(5) {
+				margin-left: 6em;
+				animation-delay: -5s;
+			}
+			
+			@keyframes dotBounce {
+				0% {
+					transform: translateY(0) scale(0.5);
+					opacity: 0;
+				}
+			
+				50% {
+					transform: translateY(-2em) scale(1);
+					opacity: 1;
+				}
+				
+				100% {
+					transform: translateY(0) scale(0.5);
+					opacity: 0;
+				}
+			}
 		</style>
 	</head>
 	<body>
-		<article class="demo">
+		<article class="demo clearfix">
 			<!-- Dot Pulse -->
 			<section class="shape">
 				<h3>脉冲</h3>
@@ -287,7 +351,17 @@
 					<div></div>
 					<div></div>
 					<div></div>
+				</div>
+			</section>
+			<!-- Dot bounce -->
+			<section class="shape">
+				<h3>点跳</h3>
+				<div class="dot dot-bounce">
 					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+ 					<div></div>
 				</div>
 			</section>
 		</article>

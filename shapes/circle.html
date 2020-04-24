@@ -84,15 +84,15 @@
 			}
 			.circle7::after{
 				content: "";
-				width: 2em;
-				height: 2em;
+				width: 1.6em;
+				height: 1.6em;
 				border-radius: 50%;
 				background: currentcolor;
 				position: absolute;
 				left: 50%;
 				top: 50%;
-				margin: -1em 0 0 -1em;
-				animation: chgsize2 1s linear infinite both;
+				margin: -0.8em 0 0 -0.8em;
+				animation: chgsize2 1s linear infinite alternate-reverse backwards;
 			}
 			
 			.circle8::after{
@@ -128,6 +128,41 @@
 				transform-origin: calc((3em - 2 * var(--bdw)) / 2) center;
 				animation: run2 3s linear infinite both;
 			}
+			
+			.circle10{
+				width: 3em;
+				height: 3em;
+				border: 4px solid rgba(255,255,255,.4);
+				border-radius: 50%;
+				position: relative;
+			}
+			.circle10::after{
+				content: "";
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				width: 3em;
+				height: 3em;
+				border: 5px solid transparent;
+				border-left-color:rgba(255,255,255,.6);
+				border-radius: 50%;
+				animation: run2 3s linear infinite both;
+			}
+			.circle10::before{
+				content: "";
+				position: absolute;
+				left:50%;
+				top: 50%;
+				width: 6px;
+				height: 6px;
+				margin-top: -3px;
+				margin-left: -3px;
+				background-color: rgba(255,255,255,2);
+				border-radius: 50%;
+				animation: chgsize2 2s linear infinite alternate;
+			}
+			
+			
 			@keyframes run {
 				0% {
 					transform: scale(1) rotate(0deg);
@@ -180,7 +215,7 @@
 		</style>
 	</head>
 	<body>
-		<article class="demo">
+		<article class="demo clearfix">
 			<section class="shape">
 				<h3>方形变圆形</h3>
 				<div class="circle circle1"></div>
@@ -224,6 +259,10 @@
 			<section class="shape">
 				<h3>圆点移动</h3>
 				<div class="circle9"></div>
+			</section>
+			<section class="shape">
+				<h3>圆环转动</h3>
+				<div class="circle10"></div>
 			</section>
 		</article>
 	</body>
