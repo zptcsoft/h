@@ -14,12 +14,6 @@
 				animation: r 1s linear infinite both;
 				position: relative;
 			}
-			.shape:hover .square,
-			.shape:hover .square div,
-			.shape:hover .square::after{
-				opacity: 1;
-				animation-play-state: paused;
-			}
 			/**
 			 * ==============================================
 			 * Square Rotate
@@ -80,7 +74,7 @@
 				position: absolute;
 				left: 10%;
 				top: 10%;
-				background: hsla(240,100%,80%,.3);
+				background:hsla(240,100%,100%,.2);
 				transform: rotate(15deg);
 				animation: r 6s linear -3s infinite both;
 				animation-delay: -2s;
@@ -102,7 +96,7 @@
 				height: 100%;
 				transform-origin: center center;
 				transform: scale(.8) rotate(30deg);
-				background: hsla(240,100%,80%,.3);
+				background: hsla(240,100%,100%,.2);
 				animation: r2 5s cubic-bezier(0.76, 0.29, 0.2, 0.66) infinite both;
 				animation-delay: 1s;
 			}
@@ -126,7 +120,7 @@
 				width: 4em;
 				height: 4em;
 				animation: none;
-				background: hsla(240,100%,80%,.2);
+				background: hsla(240,100%,100%,.2);
 			}
 			.square-rotate6 div{
 				position: absolute;
@@ -134,7 +128,7 @@
 				height: 100%;
 				transform-origin: center center;
 				transform: scale(.8);
-				background: hsla(240,100%,80%,.3);
+				background: hsla(240,100%,100%,.2);
 				animation: r3 5s cubic-bezier(0.76, 0.29, 0.2, 0.66) infinite both;
 				animation-delay: 1s;
 			}
@@ -188,22 +182,57 @@
 			 * ==============================================
 			 */
 			.square-spin{
+				margin-left: -5em;
 				position: relative;
 				width: 0;
 				height: 0;
 				animation: none;
+				--w:1.4em;
+				--w2:-1.4em;
 			}
 			.square-spin div{
-				width: 2em;
-				height: 2em;
+				width: 3em;
+				height: 3em;
 				position: absolute;
+				left: 0;
+				top: 0;
+				transform-origin: 88% center;
+				animation: squareSpin 3s linear infinite both;
+			}
+			.square-spin div:nth-child(1){
 				background: hsl(0,80%,60%);
-				transform: translate(1em) rotate(0deg);
-				transform-origin:-1em center;
-				animation: squareSpin 2s ease infinite both;
+				color:hsl(0,80%,60%);
+			}
+			.square-spin div:nth-child(2){
+				background: hsl(60,80%,60%);
+				animation-delay: -.5s;
+			}
+			.square-spin div:nth-child(3){
+				background: hsl(120,80%,60%);
+				animation-delay: -1s;
+			}
+			.square-spin div:nth-child(4){
+				background: hsl(180,80%,60%);
+				animation-delay: -1.5s;
+			}
+			.square-spin div:nth-child(5){
+				background: hsl(240,80%,60%);
+				animation-delay: -2s;
+			}
+			.square-spin div:nth-child(6){
+				background: hsl(300,80%,60%);
+				animation-delay: -2.5s;
 			}
 			@keyframes squareSpin{
-				
+				0%{
+					transform: rotate(0deg);
+				}
+				50%{
+					transform: rotate(180deg);
+				}
+				100%{
+					transform: rotate(359deg);
+				}
 			}
 		</style>
 	</head>
@@ -255,8 +284,10 @@
 			</section>
 			<!-- Square spin -->
 			<section class="shape">
-				<h3>矩形填充</h3>
+				<h3>矩形旋转</h3>
 				<div class="square square-spin">
+					<div></div>
+					<div></div>
 					<div></div>
 					<div></div>
 					<div></div>

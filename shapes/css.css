@@ -1,9 +1,10 @@
 *,
 *::before,
-*::after{
+*::after {
 	box-sizing: border-box;
 }
-.clearfix::after{
+
+.clearfix::after {
 	content: "";
 	display: block;
 	width: 0;
@@ -12,24 +13,26 @@
 	clear: both;
 }
 
-body{
-	background: hsla(320,100%,30%,.9);
+body {
+	background: hsla(240, 90%, 5%, .8);
 	color: #fff;
 	text-align: center;
 }
+
 .demo {
 	display: inline-block;
 	width: 1000px;
 	font-size: 20px;
 	/* 变量 */
-	--bdw:3px;
+	--bdw: 3px;
 }
 
 .demo h3 {
 	margin-top: -0.5em;
 	font-size: 1.2em;
 }
-.demo section.shape{
+
+.demo section.shape {
 	/* display: inline-block; */
 	float: left;
 	padding: 2em;
@@ -37,13 +40,22 @@ body{
 	height: 12em;
 	transition: all .5s;
 	text-align: center;
-	border: 5px solid rgba(255,255,255,.2);
+	border: 5px solid rgba(255, 255, 255, .2);
 }
-.demo section.shape:hover{
-	background: rgba(255,255,255,.1);
-	border: 5px solid rgba(255,255,255,1);
+
+.demo section.shape:hover {
+	background: rgba(255, 255, 255, .1);
+	border: 5px solid rgba(255, 255, 255, 1);
 	cursor: pointer;
 }
-.demo section.shape>div{
+
+.demo section.shape>div {
 	display: inline-block;
+}
+
+.shape:hover div,
+.shape:hover div div,
+.shape:hover div::after {
+	opacity: 1;
+	animation-play-state: paused;
 }
