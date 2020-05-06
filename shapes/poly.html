@@ -7,15 +7,27 @@
 		<style type="text/css">
 			.poly {
 				position: relative;
-			}
-
-			/* 六个花瓣 */
-			.poly1 {
 				width: 6em;
 				height: 6em;
 				animation: run 3s linear infinite both;
 			}
+			.poly div:nth-child(2) {
+				transform: rotate(72deg);
+			}
+			
+			.poly div:nth-child(3) {
+				transform: rotate(144deg);
+			}
+			
+			.poly div:nth-child(4) {
+				transform: rotate(216deg);
+			}
+			
+			.poly div:nth-child(5) {
+				transform: rotate(288deg);
+			}
 
+			/* 六个花瓣 */
 			.poly1 div {
 				position: absolute;
 				left: 50%;
@@ -38,12 +50,6 @@
 			}
 
 			/* 十个花瓣 */
-			.poly2 {
-				width: 6em;
-				height: 6em;
-				animation: run 3s linear infinite both;
-			}
-
 			.poly2 div {
 				position: absolute;
 				left: 50%;
@@ -57,29 +63,7 @@
 				transform-origin: center center;
 			}
 
-			.poly2 div:nth-child(2) {
-				transform: rotate(72deg);
-			}
-
-			.poly2 div:nth-child(3) {
-				transform: rotate(144deg);
-			}
-
-			.poly2 div:nth-child(4) {
-				transform: rotate(216deg);
-			}
-
-			.poly2 div:nth-child(5) {
-				transform: rotate(288deg);
-			}
-
 			/* 五个花瓣 */
-			.poly3 {
-				width: 6em;
-				height: 6em;
-				animation: run 3s linear infinite both;
-			}
-
 			.poly3 div {
 				position: absolute;
 				left: 50%;
@@ -93,29 +77,8 @@
 				transform-origin: center 60%;
 			}
 
-			.poly3 div:nth-child(2) {
-				transform: rotate(72deg);
-			}
-
-			.poly3 div:nth-child(3) {
-				transform: rotate(144deg);
-			}
-
-			.poly3 div:nth-child(4) {
-				transform: rotate(216deg);
-			}
-
-			.poly3 div:nth-child(5) {
-				transform: rotate(288deg);
-			}
 
 			/* 五角星 */
-			.poly4 {
-				width: 6em;
-				height: 6em;
-				animation: run 3s linear infinite both;
-			}
-
 			.poly4 div {
 				position: absolute;
 				left: 50%;
@@ -130,29 +93,8 @@
 				transform-origin: center 100%;
 			}
 
-			.poly4 div:nth-child(2) {
-				transform: rotate(72deg);
-			}
 
-			.poly4 div:nth-child(3) {
-				transform: rotate(144deg);
-			}
-
-			.poly4 div:nth-child(4) {
-				transform: rotate(216deg);
-			}
-
-			.poly4 div:nth-child(5) {
-				transform: rotate(288deg);
-			}
-
-			/* 五角星 */
-			.poly5 {
-				width: 6em;
-				height: 6em;
-				animation: run 3s linear infinite both;
-			}
-
+			/* 五边形 */
 			.poly5 div {
 				position: absolute;
 				left: 50%;
@@ -167,29 +109,8 @@
 				transform-origin: center center;
 			}
 
-			.poly5 div:nth-child(2) {
-				transform: rotate(72deg);
-			}
 
-			.poly5 div:nth-child(3) {
-				transform: rotate(144deg);
-			}
-
-			.poly5 div:nth-child(4) {
-				transform: rotate(216deg);
-			}
-
-			.poly5 div:nth-child(5) {
-				transform: rotate(288deg);
-			}
-
-			/* 五角星 */
-			.poly6 {
-				width: 6em;
-				height: 6em;
-				animation: run 3s linear infinite both;
-			}
-
+			/* 五边环形 */
 			.poly6 div {
 				width: 4.36em;
 				height: 1em;
@@ -210,18 +131,30 @@
 				border-width: 3em 2.18em;
 				border-bottom-color: currentColor;
 			}
-
-			.poly6 div:nth-child(2){
-				transform: rotate(72deg);
+			
+			/* 五边环形 */
+			.poly7{
+				animation-duration: 1.5s;
 			}
-			.poly6 div:nth-child(3){
-				transform: rotate(144deg);
+			.poly7 div {
+				width: 4.36em;
+				height: 1em;
+				overflow: hidden;
+				position: absolute;
+				left: calc((6em - 4.36em) / 2);
+				top: 5em;
+				transform-origin: center -2em;
 			}
-			.poly6 div:nth-child(4){
-				transform: rotate(216deg);
-			}
-			.poly6 div:nth-child(5){
-				transform: rotate(288deg);
+			.poly7 div::after{
+				content: "";
+				position: absolute;
+				left: 0em;
+				bottom: 0em;
+				width: 6em;
+				height: 6em;
+				border: .2em solid transparent;
+				border-radius: 50%;
+				border-bottom-color: currentColor;
 			}
 
 			@keyframes run {
@@ -295,6 +228,16 @@
 			<section class="shape">
 				<h3>五边形环</h3>
 				<div class="poly poly6">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</section>
+			<section class="shape">
+				<h3>五花瓣</h3>
+				<div class="poly poly7">
 					<div></div>
 					<div></div>
 					<div></div>
