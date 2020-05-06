@@ -187,26 +187,31 @@
 			.poly6 {
 				width: 6em;
 				height: 6em;
-				/* animation: run 3s linear infinite both; */
+				animation: run 3s linear infinite both;
 			}
 
 			.poly6 div {
+				width: 4.36em;
+				height: 1em;
+				overflow: hidden;
 				position: absolute;
-				left: 50%;
-				top: 50%;
-				margin-top: -3em;
-				margin-left: -2.18em;
-				width: 0;
-				height: 0;
-				/* width: 0em;
+				left: calc((6em - 4.36em) / 2);
+				top: 5em;
+				transform-origin: center -2em;
+			}
+			.poly6 div::after{
+				content: "";
+				position: absolute;
+				left: 0em;
+				bottom: 0em;
+				width: 0em;
 				height: 0em;
 				border: 3em solid transparent;
 				border-width: 3em 2.18em;
-				border-bottom-color: currentColor; 
-				transform-origin: center center; */
+				border-bottom-color: currentColor;
 			}
 
-			/* .poly6 div:nth-child(2){
+			.poly6 div:nth-child(2){
 				transform: rotate(72deg);
 			}
 			.poly6 div:nth-child(3){
@@ -217,7 +222,7 @@
 			}
 			.poly6 div:nth-child(5){
 				transform: rotate(288deg);
-			} */
+			}
 
 			@keyframes run {
 				0% {
