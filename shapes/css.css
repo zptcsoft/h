@@ -55,7 +55,8 @@ body {
 
 .shape:hover div,
 .shape:hover div div,
-.shape:hover div::after {
+.shape:hover div::after,
+.shape:hover div div::after{
 	opacity: 1;
 	animation-play-state: paused;
 }

@@ -164,6 +164,109 @@
 				animation: chgsize2 2s linear infinite alternate;
 			}
 			
+			.circle11,.circle12{
+				width: 3em;
+				height: 3em;
+				background-color: currentcolor;
+				border-radius: 50%;
+				position: relative;
+			}
+			.circle11::after,
+			.circle12::after{
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0;
+				height: 0;
+				border: 1.5em solid hsla(200,100%,40%,.5);
+				border-radius: 50%;
+				border-color: hsla(200,100%,40%,.5) transparent;
+				transform-origin: center center;
+				animation:  run3 3s ease infinite both;
+			}
+			
+			.circle12::after{
+				border-color: transparent hsla(200,100%,40%,.5) hsla(200,100%,40%,.5) transparent;
+				animation-name:  run4;
+			}
+			
+			.circle13,.circle14{
+				width: 3em;
+				height: 3em;
+				background-color: currentcolor;
+				border: 2px solid currentcolor;
+				border-radius: 50%;
+				position: relative;
+				overflow: hidden;
+			}
+			.circle13>div,
+			.circle14>div{
+				width: 50%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				overflow: hidden;
+			}
+			.circle13>div:nth-child(2),
+			.circle14>div:nth-child(2){
+				left: 50%;
+			}
+			.circle13>div::after,
+			.circle14>div::after{
+				content: "";
+				position: absolute;
+				left: 100%;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				background: none repeat scroll 0 0 hsla(200,100%,40%,.5);
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+				transform-origin: 0 center;
+				animation:  run 3s linear infinite both;
+			}
+			.circle13>div:nth-child(2)::after,
+			.circle14>div:nth-child(2)::after{
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+				left: -100%;
+				transform-origin: 100% 50% 0;
+			}
+			
+			.circle14>div::after{
+				animation:  run5 4s -4s linear infinite both;
+			}
+			.circle14>div:nth-child(2)::after{
+				animation:  run6 4s 0s linear infinite both;
+			}
+			
+			.circle15{
+				width: 3em;
+				height: 3em;
+				border: 2px solid currentcolor;
+				border-radius: 50%;
+				position: relative;
+				box-sizing: border-box;
+			}
+			.circle15::after{
+				content: "";
+				position: absolute;
+				left: -1px;
+				top: -1px;
+				width: calc(3em - 2px);
+				height: calc(3em - 2px);
+				border: 6px solid currentcolor;
+				border-bottom-color: transparent;
+				border-left-color: transparent;
+				border-top-width: 0px;
+				border-radius: 50%;
+				box-sizing: border-box;
+				animation: run2 3s linear infinite both;
+				animation-direction: reverse;
+			}
 			
 			@keyframes run {
 				0% {
@@ -212,6 +315,74 @@
 				
 				100% {
 					transform: rotate(0deg);
+				}
+			}
+			@keyframes run3 {
+				0% {
+					transform: rotate(0deg);
+				}
+				
+				50% {
+					transform: rotate(359deg);
+				}
+				
+				51%,100%{
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes run4 {
+				0% {
+					transform: rotate(45deg);
+				}
+				
+				50% {
+					transform: rotate(494deg);
+				}
+				
+				51%,100%{
+					transform: rotate(495deg);
+				}
+			}
+			@keyframes run5 {
+				0% {
+					transform: rotate(0deg)
+				}
+				
+				25% {
+					transform: rotate(0deg)
+				}
+				
+				50% {
+					transform: rotate(180deg)
+				}
+				
+				75% {
+					transform: rotate(180deg)
+				}
+				
+				100% {
+					transform: rotate(360deg)
+				}
+			}
+			@keyframes run6 {
+				0% {
+					transform: rotate(0deg)
+				}
+			
+				25% {
+					transform: rotate(180deg)
+				}
+			
+				50% {
+					transform: rotate(180deg)
+				}
+			
+				75% {
+					transform: rotate(360deg)
+				}
+			
+				100% {
+					transform: rotate(360deg)
 				}
 			}
 		</style>
@@ -265,6 +436,33 @@
 			<section class="shape">
 				<h3>圆环转动</h3>
 				<div class="circle10"></div>
+			</section>
+			<section class="shape">
+				<h3>圆环转动2</h3>
+				<div class="circle11"></div>
+			</section>
+			<section class="shape">
+				<h3>圆环转动3</h3>
+				<div class="circle12"></div>
+			</section>
+			<section class="shape">
+				<h3>圆环转动4</h3>
+				<div class="circle13">
+					<div></div>
+					<div></div>
+				</div>
+			</section>
+			<section class="shape">
+				<h3>圆环转动5</h3>
+				<div class="circle14">
+					<div></div>
+					<div></div>
+				</div>
+			</section>
+			<section class="shape">
+				<h3>圆环转动5</h3>
+				<div class="circle15">
+				</div>
 			</section>
 		</article>
 	</body>
