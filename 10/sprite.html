@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.title{
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.sprite{}
+			.sprite::before{
+				content: "";
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				background-image: url(img/sprite-channelTitle-icons@2x-0422.png);
+				background-size: 400px 120px;
+				background-position: 0px 0px;
+			}
+			.focus::before{
+				background-position: 0px 0px;
+			}
+			.guess::before{
+				background-position: -40px 0px;
+			}
+			.art::before{
+				background-position: -40px -40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title sprite focus">
+			今日焦点
+		</div>
+		<div class="title sprite guess">
+			猜你在追
+		</div>
+		<div class="title sprite art">
+			综艺
+		</div>
+	</body>
+</html>
